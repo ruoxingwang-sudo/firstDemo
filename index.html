@@ -1,16 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
-    <title>FirstDemo</title>
-  </head>
-  <body>
-    <div id="app">
-      hello world
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+
+
+  <title>FirstDemo</title>
+</head>
+
+<body>
+  <section class="main-structure">
+    <header>
+      <!-- Header -->
+      <!-- a>div.logo 可以生成以下a标签 -->
+      <a href="#">
+        <div class="logo">Profile</div>
+      </a>
+      <div class="menu-logo"></div>
+    </header>
+    <div class="content">Body
+      <a href="https://www.google.com">Explore</a>
     </div>
-    <!-- <script type="module" src="/main.js"></script> -->
-  </body>
+    <footer>
+      <!-- footer -->
+      <!-- 使用 (a>img)*3 可生成如下标签 -->
+      <a href="#">
+        <img src="/src/icons/facebook.svg" alt="facebook">
+      </a>
+      <a href="#">
+        <img src="/src/icons/instagram.svg" alt="instagram">
+      </a>
+      <a href="#">
+        <img src="/src/icons/twitter.svg" alt="twitter">
+      </a>
+    </footer>
+  </section>
+
+  <!-- <script type="module" src="/main.js"></script> -->
+</body>
+
 </html>
