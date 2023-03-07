@@ -2,8 +2,10 @@
 
 :root {
   /* --main-phone-font-size:16px; */
-  --main-desktop-font-size: 30px;
+  --main-desktop-font-size: 24px;
   --main-pad-font-size: calc(var(--main-desktop-font-size) * 4.8 / 6);
+
+  --main-color: #03a8f4;
   --main-background-color: #333;
   --main-text-color: #fff;
   --main-desktop-border-color: #111;
@@ -20,12 +22,12 @@
   --text-description-h2-desktop-size: 2.5rem;
   --text-description-p-desktop-size: 1rem;
 
-  --text-description-h1-desktop-size: 2.5rem;
-  --text-description-h2-desktop-size: 2rem;
-  --text-description-p-desktop-size: 1rem;
+  --text-description-h1-pad-size: 2.5rem;
+  --text-description-h2-pad-size: 2rem;
+  --text-description-p-pad-size: 1rem;
 
 
-  
+
 }
 
 * {
@@ -69,7 +71,7 @@ a {
 .main-structure .content,
 .main-structure footer {
   width: 100%;
-  border: 5px dashed var(--main-desktop-border-color);
+
 
 }
 
@@ -151,17 +153,19 @@ header .menu-logo {
   z-index: -1;
 }
 
-.content .text-description h1{
+.content .text-description h1 {
   font-size: var(--text-description-h1-desktop-size);
   line-height: 1em;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5),
+    -1px -1px 5px rgba(255, 255, 255, 0.5);
 }
 
-.content .text-description h2{
+.content .text-description h2 {
   font-size: var(--text-description-h2-desktop-size);
   line-height: 1em;
 }
 
-.content .text-description p{
+.content .text-description p {
   font-size: var(--text-description-p-desktop-size);
   line-height: 1.5rem;
   max-width: 700px;
@@ -169,11 +173,45 @@ header .menu-logo {
   margin: 3em 0;
 }
 
+.content .text-description a {
+  font-size: 20px;
+  text-decoration: none;
+  border: 2px solid var(--main-text-color);
+  line-height: 1em;
+  padding: 10px 30px;
+  border-radius: 30px;
+  /* cursor:pointer
+  默认值 cursor：pointer， 即鼠标放在内容上会变换光标 */
+
+
+  /* box阴影网页：https://neumorphism.io/#e0e0e0 */
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3),
+    -1px -1px 8px rgba(255, 255, 255, 0.3);
+
+  /* transition 不要写到和内容相关的伪类中，比如hover，写到实体类中才能保证transition time双向作用 */
+  transition: 0.5s;
+}
+
+.content .text-description a:hover {
+
+  /* 一些高端hover */
+  background: var(--main-color);
+  letter-spacing: 5px;
+  box-shadow: none;
+
+}
+
+.content .text-description a:active{
+  background: #111;
+  letter-spacing: 5px;
+  box-shadow: none;
+}
+
 
 /* 当窗口大小在一定范围内时，重新设定一些属性
 一切初始属性必须卸载media上面 ！ */
-@media (max-width:1000px) {
-  :root{
+@media (max-height:1000px) {
+  :root {
     font-size: 16px;
   }
 }
@@ -198,7 +236,8 @@ header .menu-logo {
   .main-structure footer a img {
     width: var(--footer-icon-pad-width);
   }
-  .content .text-description p{
+
+  .content .text-description p {
     font-size: var(--text-description-p-pad-size);
     line-height: 1.5rem;
     max-width: 600px;
@@ -206,9 +245,28 @@ header .menu-logo {
     /* text-align: justify; */
     margin: 2em 0;
   }
-  
- 
-  
+
+  .content .text-description h1 {
+    font-size: var(--text-description-h1-pad-size);
+    line-height: 1em;
+  }
+
+  .content .text-description h2 {
+    font-size: var(--text-description-h2-pad-size);
+    line-height: 1em;
+  }
+
+  .content .text-description p {
+    font-size: var(--text-description-p-pad-size);
+    line-height: 1.5rem;
+    max-width: 600px;
+    min-width: 400px;
+    /* text-align: justify; */
+    margin: 2em 0;
+  }
+
+
+
 }
 
 
