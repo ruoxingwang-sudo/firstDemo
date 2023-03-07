@@ -15,6 +15,17 @@
   --screen-pad-padding-left-right: 30px;
   --footer-icon-width: 30px;
   --footer-icon-pad-width: calc(var(--footer-icon-width)*5/6);
+
+  --text-description-h1-desktop-size: 3rem;
+  --text-description-h2-desktop-size: 2.5rem;
+  --text-description-p-desktop-size: 1rem;
+
+  --text-description-h1-desktop-size: 2.5rem;
+  --text-description-h2-desktop-size: 2rem;
+  --text-description-p-desktop-size: 1rem;
+
+
+  
 }
 
 * {
@@ -30,6 +41,9 @@
 
 html,
 body {
+  /* all:unset 让背景显现 */
+  all: unset;
+
   width: 100vw;
 
   /* 用最小高的原因是防止内容高度超过100vh */
@@ -95,6 +109,9 @@ header .menu-logo {
 
   width: var(--header-toggle-width);
   height: var(--header-toggle-width);
+
+  /* background-repeat: no-repeat 的作用是避免当设定的宽高超过图片
+  本身时，图片通过复制自己来填补空位 */
   background-repeat: no-repeat;
   background-position: center;
   background-size: var(--header-toggle-width);
@@ -120,12 +137,47 @@ header .menu-logo {
   width: var(--footer-icon-width);
 }
 
+.main-structure .content video {
+  position: absolute;
 
+  /* inset 是top, bottom, right, left 的四项集合 */
+  inset: 0;
 
+  height: 100%;
+  width: 100%;
+
+  /*让视频把视窗cover住  */
+  object-fit: cover;
+  z-index: -1;
+}
+
+.content .text-description h1{
+  font-size: var(--text-description-h1-desktop-size);
+  line-height: 1em;
+}
+
+.content .text-description h2{
+  font-size: var(--text-description-h2-desktop-size);
+  line-height: 1em;
+}
+
+.content .text-description p{
+  font-size: var(--text-description-p-desktop-size);
+  line-height: 1.5rem;
+  max-width: 700px;
+  min-width: 400px;
+  margin: 3em 0;
+}
 
 
 /* 当窗口大小在一定范围内时，重新设定一些属性
 一切初始属性必须卸载media上面 ！ */
+@media (max-width:1000px) {
+  :root{
+    font-size: 16px;
+  }
+}
+
 @media (max-width:1200px) {
   .main-structure {
     font-size: var(--main-pad-font-size);
@@ -146,6 +198,17 @@ header .menu-logo {
   .main-structure footer a img {
     width: var(--footer-icon-pad-width);
   }
+  .content .text-description p{
+    font-size: var(--text-description-p-pad-size);
+    line-height: 1.5rem;
+    max-width: 600px;
+    min-width: 400px;
+    /* text-align: justify; */
+    margin: 2em 0;
+  }
+  
+ 
+  
 }
 
 
