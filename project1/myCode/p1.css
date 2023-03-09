@@ -1,0 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* text-decoration 可以决定是否取消一些特殊字的装饰 */
+  text-decoration: none;
+  /* webkit-user-drag 决定用户能否拖拽图片 */
+  -webkit-user-drag: none;
+}
