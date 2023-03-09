@@ -4,7 +4,6 @@ pics.forEach(pic => {
     removeActiveClasses()
     pic.classList.add('active')
   })
-  
 })
 
 function removeActiveClasses() {
