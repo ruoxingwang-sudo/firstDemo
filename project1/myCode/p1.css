@@ -7,3 +7,54 @@
   /* webkit-user-drag 决定用户能否拖拽图片 */
   -webkit-user-drag: none;
 }
+
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  overflow: hidden;
+  margin: 0;
+}
+.container{
+  display: flex;
+  width: 90vw;
+}
+
+.pic{
+  position: relative;
+  margin: 10px;
+  height: 80vh;
+  width: 90vw;
+  border-radius: 50px;
+  flex: 0.5;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 1s;
+}
+
+.active{
+  flex: 5;
+}
+
+#pic1{
+  background-image: url('https://images.unsplash.com/photo-1558979158-65a1eaa08691?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80')
+}
+
+#pic2{
+  background-image: url('https://images.unsplash.com/photo-1572276596237-5db2c3e16c5d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
+}
+
+#pic3{
+  background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1353&q=80');
+}
+
+#pic4{
+  background-image: url('https://images.unsplash.com/photo-1551009175-8a68da93d5f9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80');
+}
+
+
+#pic5{
+  background-image: url('https://images.unsplash.com/photo-1549880338-65ddcdfd017b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
+}
